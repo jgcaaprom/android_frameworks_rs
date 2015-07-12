@@ -282,15 +282,17 @@ ELEMENT_AT(double3)
 ELEMENT_AT(double4)
 
 typedef unsigned long long ull;
-typedef unsigned long long ull2 __attribute__((ext_vector_type(2)));
-typedef unsigned long long ull3 __attribute__((ext_vector_type(3)));
-typedef unsigned long long ull4 __attribute__((ext_vector_type(4)));
+typedef unsigned long ull2 __attribute__((ext_vector_type(2)));
+typedef unsigned long ull3 __attribute__((ext_vector_type(3)));
+typedef unsigned long ull4 __attribute__((ext_vector_type(4)));
 
 #ifndef RS_DEBUG_RUNTIME
 SET_ELEMENT_AT_TYPE(ull, ulong)
+/*
 SET_ELEMENT_AT_TYPE(ull2, ulong2)
 SET_ELEMENT_AT_TYPE(ull3, ulong3)
 SET_ELEMENT_AT_TYPE(ull4, ulong4)
+*/
 
 #undef SET_ELEMENT_AT_TYPE
 #undef GET_ELEMENT_AT_TYPE
